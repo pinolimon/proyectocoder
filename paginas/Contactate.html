@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="multimedia/img2.jpg" type="image/x-icon" />
+    <title>RegionCine</title>
+    <link rel="stylesheet" href="../css/RegionCine.css" />
+  </head>
+    <body>
+      <header id="arriba">
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>Provincias</li>
+            <li>Proyectos</li>
+            <li>Contactate</li>
+            <li>Sobre Mi</li>
+
+            <hr />
+          </ul>
+        </nav>
+        Si tenes un proyecto que querés compartir, contactate con nosotros.
+      </header>
+      <hr />
+      <form method="get" action="" enctype="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" required name="nombre" />
+        <br />
+        <label for="apellido">Apellido</label>
+        <input type="text" required name="apellido" />
+        <br />
+        <label for="proyecto"> Proyecto </label>
+        <input type="text" name="proyecto" />
+        <br />
+        <label for="mensaje">Dejanos tu mensaje</label>
+        <textarea name="mensaje" cols="60" rows="7"></textarea>
+        <label for="provincia">¿De dónde sos?</label>
+        <select name="provincia">
+          <option value="CHA">Chaco</option>
+          <option value="FOR">Formosa</option>
+          <option value="COR">Corrientes</option>
+          <option value="MIS">Misiones</option>
+        </select>
+        <input type="reset" value="Borrar todo" />
+        <input type="submit" value="Enviar" />
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <label for="direccion">Ingresa tu correo</label>
+          <input type="mail" name="direccion" />
+        </fieldset>
+      </form>
+    </body>
+    <footer class="footer">
+      <p class="footer">Página creada por tomitt0 para curso Desarrollo Web</p>
+      
+    </footer>
+  </html>
+</html>

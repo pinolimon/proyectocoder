@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #874c00;
+}
+header {
+  justify-content: end;
+  align-items: center;
+}
+header div .navbar-nav :hover {
+  background-color: #da922e;
+}
+header nav div .logo {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+main .img {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+}
+main div img {
+  width: 80%;
+}
+main h1 {
+  color: #031c30;
+}
+main .p-uno {
+  color: #f6a93d;
+}
+main .p-dos {
+  color: #f6a93d;
+}
+main h1 span {
+  display: block;
+}
+/* botones index */
+div .botones {
+  background-color: #da922e;
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+div .botones .boton {
+  background-color: #da922e;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+div .botones .boton-dos {
+  padding: 0.5rem 1rem;
+}
+
+/* estilos section */
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+section .card {
+  background-color: #da922e;
+  padding: 2rem;
+  border-radius: 5px;
+}
+section .card h2 {
+  margin-bottom: 1rem;
+  color: #031c30;
+}
+
+/* mq mobil - desktop */
+@media screen and (min-width: 500px) {
+  div .botones {
+    justify-content: center;
+    align-items: center;
+  }
+  main h1 {
+    text-align: center;
+  }
+  main .p-uno {
+    text-align: center;
+  }
+  main .p-dos {
+    padding-top: ;
+    text-align: center;
+  }
+}
+footer {
+  color: #031c30;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  div .img {
+    width: 90%;
+    object-fit: cover;
+  }
+  div .botones {
+    justify-content: left;
+    align-items: end;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 0.1fr 0.1fr 0.5fr;
+    grid-template-areas:
+      "h1 img"
+      "p-uno img"
+      "p-dos img"
+      "botones img";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  main h1 {
+    grid-area: h1;
+    text-align: center;
+  }
+  main .img {
+    grid-area: img;
+  }
+  main .p-uno {
+    grid-area: p-uno;
+  }
+  main .p-dos {
+    grid-area: p-dos;
+  }
+  main .botones {
+    grid-area: botones;
+  }
+  /* section */
+  section {
+    flex-direction: row;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 25rem;
+  }
+}
+/* estilos Sobre-Mi */
+.body-sm {
+  background-color: #010d16;
+}
+section .car-sm {
+  background-color: #da922e;
+
+  border-radius: 5px;
+}
+main .sm {
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 25%);
+  gap: 3rem;
+  margin: 3rem 2rem 3rem 2rem;
+  align-content: center;
+}
+main .dos {
+  display: none;
+}
+main div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .footer-sm {
+  color: #da922e;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
+  }
+  main .cuatro {
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .dos {
+    display: block;
+  }
+  main {
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: 40% 40% 30%;
+  }
+  main .uno,
+  .tres {
+    grid-row: span 2;
+  }
+}
+main .dos,
+main .cuatro {
+  grid-column: span 1;
+}
