@@ -1,18 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  background-color: #874c00;
+  background-color: $color-fondo-body;
 }
 header {
   justify-content: end;
   align-items: center;
 }
 header div .navbar-nav :hover {
-  background-color: #da922e;
+  background-color: $color-fondo-header;
 }
+
 header nav div .logo {
   display: flex;
   width: 25%;
@@ -21,105 +17,103 @@ header nav div .logo {
 }
 
 main {
-  padding: 1rem;
+  padding: $padding1rem;
   display: flex;
   flex-direction: column;
 }
+
 main .img {
   display: flex;
   justify-content: center;
   border-radius: 25px;
 }
+
 main div img {
-  width: 80%;
+  width: $width80;
 }
+
 main h1 {
-  color: #031c30;
+  color: $color-texto-H1;
 }
-main .p-uno {
-  color: #f6a93d;
-}
+
+main .p-uno,
 main .p-dos {
-  color: #f6a93d;
+  color: $color-texto-p;
 }
+
 main h1 span {
   display: block;
 }
-/* botones index */
 
-div .botones .boton {
-  gap: 1rem;
-  margin-top: 1rem;
-  display: flex;
-  background-color: #da922e;
-  color: white;
-  margin-right: 10px;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
+/* botones index */
+div .botones .boton,
 div .botones .boton-dos {
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: $gap1rem;
+  margin-top: $margin1rem;
   display: flex;
-  background-color: #da922e;
-  color: white;
-  margin-right: 10px;
-  padding: 10px 20px;
+  background-color: $color-fondo-boton;
+  color: $color-texto-boton;
+  margin-right: $margin-right10px;
+  padding: $padding10px $padding20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: $border-radius;
 }
 
 /* estilos section */
 section {
   display: flex;
   flex-direction: column;
-  margin-top: 15rem;
-  padding: 1rem;
-  gap: 1rem;
+  margin-top: $margin-top15rem;
+  padding: $padding1rem;
+  gap: $gap1rem;
 }
+
 section .card {
-  background-color: #da922e;
-  padding: 2rem;
-  border-radius: 5px;
+  background-color: $color-fondo-header;
+  padding: $padding2rem;
+  border-radius: $border-radius;
 }
+
 section .card h2 {
-  margin-bottom: 1rem;
-  color: #031c30;
+  margin-bottom: $margin-bottom1rem;
+  color: $color-textoH1;
 }
 
 /* mq mobil - desktop */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: $min-width500px) {
   div .botones {
     justify-content: center;
     align-items: center;
   }
-  main h1 {
-    text-align: center;
-  }
+
+  main h1,
   main .p-uno {
-    text-align: center;
+    text-align: $text-align-center;
   }
+
   main .p-dos {
-    padding-top: ;
-    text-align: center;
+    padding-top: 20px;
+    text-align: $text-align-center;
   }
 }
+
 footer {
-  color: #031c30;
+  color: $color-textoH1;
   display: flex;
   text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $min-width1024px) {
   div .img {
     width: 90%;
     object-fit: cover;
   }
+
   div .botones {
     justify-content: left;
     align-items: end;
   }
+
   main {
     display: grid;
     grid-template-columns: auto;
@@ -133,194 +127,41 @@ footer {
     align-items: center;
     justify-items: center;
   }
+
   main h1 {
     grid-area: h1;
-    text-align: center;
+    text-align: $text-align-center;
   }
+
   main .img {
     grid-area: img;
   }
+
   main .p-uno {
     grid-area: p-uno;
   }
+
   main .p-dos {
     grid-area: p-dos;
   }
+
   main .botones {
     grid-area: botones;
   }
+
   /* section */
   section {
     flex-direction: row;
   }
+
   footer {
     display: flex;
     justify-content: center;
     padding-top: 25rem;
   }
 }
-/* estilos provincias */
 .botones {
   display: flex;
   justify-content: center;
   gap: 20px;
-}
-
-/* estilos sobre-mi */
-.body-sm {
-  background-color: #010d16;
-}
-
-section .card-sm {
-  background-color: #da922e;
-  text-align: center;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-main .sm {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-main .dos,
-main .cuatro,
-main .cinco {
-  display: none;
-}
-
-main div img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-footer .footer-sm {
-  color: #da922e;
-  text-align: center;
-  padding: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  section .card-sm {
-    position: relative; /* Cambiar de absolute a relative */
-    top: auto; /* Quitar la propiedad top */
-    left: auto; /* Quitar la propiedad left */
-    transform: none; /* Quitar la propiedad transform */
-    margin-bottom: 20px; /* Dejar el margin-bottom */
-  }
-
-  main .sm {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-  }
-
-  main .uno,
-  main .tres {
-    grid-row: span 1;
-  }
-
-  main .dos,
-  main .cuatro,
-  main .cinco {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  main .dos,
-  main .cuatro,
-  main .cinco {
-    display: none;
-  }
-
-  main .uno,
-  main .tres {
-    display: block;
-  }
-}
-/* estilos cartelera */
-.cartelera {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
-.footercarte {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  margin-top: 30rem;
-  padding: 5px;
-}
-/* estilos contactate */
-.container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-label {
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-input[type="reset"],
-input[type="submit"] {
-  background-color: #da922e;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  background-color: #874c00;
-}
-
-/* Estilos del pie de página */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  header .navbar-nav {
-    flex-direction: column;
-  }
-
-  header .navbar-toggler {
-    margin-top: 10px;
-  }
 }

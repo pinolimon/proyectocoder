@@ -1,0 +1,164 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+body {
+  background-color: $color-fondo-body;
+}
+header {
+  justify-content: end;
+  align-items: center;
+}
+header div .navbar-nav :hover {
+  background-color: $color-fondo-header;
+}
+
+header nav div .logo {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  padding: $padding1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main .img {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+main div img {
+  width: $width80;
+}
+
+main h1 {
+  color: $color-texto-H1;
+}
+
+main .p-uno,
+main .p-dos {
+  color: $color-texto-p;
+}
+
+main h1 span {
+  display: block;
+}
+
+/* botones index */
+div .botones .boton,
+div .botones .boton-dos {
+  gap: $gap1rem;
+  margin-top: $margin1rem;
+  display: flex;
+  background-color: $color-fondo-boton;
+  color: $color-texto-boton;
+  margin-right: $margin-right10px;
+  padding: $padding10px $padding20px;
+  text-decoration: none;
+  border-radius: $border-radius;
+}
+
+/* estilos section */
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: $margin-top15rem;
+  padding: $padding1rem;
+  gap: $gap1rem;
+}
+
+section .card {
+  background-color: $color-fondo-header;
+  padding: $padding2rem;
+  border-radius: $border-radius;
+}
+
+section .card h2 {
+  margin-bottom: $margin-bottom1rem;
+  color: $color-textoH1;
+}
+
+/* mq mobil - desktop */
+@media screen and (min-width: $min-width500px) {
+  div .botones {
+    justify-content: center;
+    align-items: center;
+  }
+
+  main h1,
+  main .p-uno {
+    text-align: $text-align-center;
+  }
+
+  main .p-dos {
+    padding-top: 20px;
+    text-align: $text-align-center;
+  }
+}
+
+footer {
+  color: $color-textoH1;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (min-width: $min-width1024px) {
+  div .img {
+    width: 90%;
+    object-fit: cover;
+  }
+
+  div .botones {
+    justify-content: left;
+    align-items: end;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 0.1fr 0.1fr 0.5fr;
+    grid-template-areas:
+      "h1 img"
+      "p-uno img"
+      "p-dos img"
+      "botones img";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  main h1 {
+    grid-area: h1;
+    text-align: $text-align-center;
+  }
+
+  main .img {
+    grid-area: img;
+  }
+
+  main .p-uno {
+    grid-area: p-uno;
+  }
+
+  main .p-dos {
+    grid-area: p-dos;
+  }
+
+  main .botones {
+    grid-area: botones;
+  }
+
+  /* section */
+  section {
+    flex-direction: row;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 25rem;
+  }
+}

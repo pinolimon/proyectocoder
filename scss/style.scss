@@ -1,0 +1,349 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  @include reset;
+}
+
+body {
+  background-color: $primary-bg-color;
+}
+
+header {
+  justify-content: flex-end;
+  align-items: center;
+
+  div .navbar-nav {
+    &:hover {
+      background-color: $secondary-bg-color;
+    }
+  }
+
+  nav div .logo {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .img {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+
+    div img {
+      width: 80%;
+    }
+  }
+
+  h1 {
+    color: $main-text-color;
+    span {
+      display: block;
+    }
+  }
+
+  .p-uno,
+  .p-dos {
+    color: $highlight-color;
+  }
+}
+
+// Mixin para botones
+@mixin button-styles {
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  background-color: $button-bg-color;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+div .botones {
+  .boton,
+  .boton-dos {
+    @include button-styles;
+  }
+}
+
+// Estilos section
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rem;
+  padding: 1rem;
+  gap: 1rem;
+
+  .card {
+    background-color: $card-bg-color;
+    padding: 2rem;
+    border-radius: 5px;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: $main-text-color;
+    }
+  }
+}
+
+// Media query móvil - escritorio
+@media screen and (min-width: 500px) {
+  div .botones {
+    justify-content: center;
+    align-items: center;
+  }
+
+  main h1,
+  main .p-uno {
+    text-align: center;
+  }
+
+  main .p-dos {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+footer {
+  color: $main-text-color;
+  display: flex;
+  text-align: center;
+
+  @media screen and (min-width: 1024px) {
+    div .img {
+      width: 90%;
+      object-fit: cover;
+    }
+
+    div .botones {
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 0.1fr 0.1fr 0.5fr;
+      grid-template-areas:
+        "h1 img"
+        "p-uno img"
+        "p-dos img"
+        "botones img";
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+
+      h1 {
+        grid-area: h1;
+        text-align: center;
+      }
+
+      .img {
+        grid-area: img;
+      }
+
+      .p-uno {
+        grid-area: p-uno;
+      }
+
+      .p-dos {
+        grid-area: p-dos;
+      }
+
+      .botones {
+        grid-area: botones;
+      }
+    }
+
+    // Estilos section
+    section {
+      flex-direction: row;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      padding-top: 25rem;
+    }
+  }
+}
+
+// Estilos provincias
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+// Estilos sobre-mi
+.body-sm {
+  background-color: #010d16;
+}
+
+section .card-sm {
+  background-color: $section-bg-color;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+main .sm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+main .dos,
+main .cuatro,
+main .cinco {
+  display: none;
+}
+
+main div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer .footer-sm {
+  color: $section-bg-color;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  section .card-sm {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  main .sm {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  main .uno,
+  main .tres {
+    grid-row: span 1;
+  }
+
+  main .dos,
+  main .cuatro,
+  main .cinco {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .dos,
+  main .cuatro,
+  main .cinco {
+    display: none;
+  }
+
+  main .uno,
+  main .tres {
+    display: block;
+  }
+}
+
+// Estilos cartelera
+.cartelera {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.footercarte {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-top: 30rem;
+  padding: 5px;
+}
+
+// Estilos contactate
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: $box-shadow;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  input[type="reset"],
+  input[type="submit"] {
+    background-color: $button-bg-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background-color: $button-hover-color;
+  }
+}
+
+// Estilos del pie de página
+.footer {
+  background-color: $footer-bg-color;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+// Estilos responsivos
+@media (max-width: 768px) {
+  header .navbar-nav {
+    flex-direction: column;
+  }
+
+  header .navbar-toggler {
+    margin-top: 10px;
+  }
+}
