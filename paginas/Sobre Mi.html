@@ -20,73 +20,167 @@
   <body class="body-sm">
     <div class="padre-sm">
       <header>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">Region Cine</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div
+              class="collapse navbar-collapse"
+              id="navbarNavAltMarkup"
+            >
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                <a class="nav-link" href="../paginas/Provincias.html">Provincias</a>
-                <a class="nav-link" href="../paginas/Proyectos.html">Proyectos</a>
-                <a class="nav-link" href="../paginas/Contactate.html">Contactate</a>
-                <a class="nav-link" href="../paginas/Sobre Mi.html">Sobre Mi</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                >
+                  Inicio
+                </a>
+                <a
+                  class="nav-link"
+                  href="../paginas/Provincias.html"
+                >
+                  Provincias
+                </a>
+                <a
+                  class="nav-link"
+                  href="../paginas/Proyectos.html"
+                >
+                  Proyectos
+                </a>
+                <a
+                  class="nav-link"
+                  href="../paginas/Contactate.html"
+                >
+                  Contactate
+                </a>
+                <a
+                  class="nav-link"
+                  href="../paginas/Sobre Mi.html"
+                >
+                  Sobre Mi
+                </a>
               </div>
             </div>
           </div>
         </nav>
-    </header>
-    <section>
+      </header>
+      <section>
         <section>
-          <div class="card">
+          <div class="card-sm">
             <h2>Tomas Cuevas</h2>
             <p>
-              Haciendo click en cualquiera de las imagenes, podrás conocer un poco de mi historia y algunos de mis trabajos 
+              Haciendo clic en cualquiera de las imágenes, podrás conocer un poco de mi historia y algunos de mis trabajos
             </p>
           </div>
-    </section>
-    <main class="main-sm">
-      
-      <div class="uno">
-        <a href="https://tomas-cuevas.jimdosite.com/">
-         <img src="../multimedia/imagen-uno.jpeg" alt="autoretrato tomasc link a cv"  /> 
-        </a>       
+        </section>
+        <main class="main-sm">
+          <!-- Carrusel de Bootstrap para escritorio -->
+          <div class="container d-none d-md-block">
+            <div
+              id="desktopCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="https://tomas-cuevas.jimdosite.com/">
+                    <img
+                      src="../multimedia/imagen-uno.jpeg"
+                      class="d-block w-100"
+                      alt="Imagen 1"
+                    />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="https://tomas-cuevas.jimdosite.com/">
+                    <img
+                      src="../multimedia/imagen-dos.jpeg"
+                      class="d-block w-100"
+                      alt="Imagen 2"
+                    />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="https://tomas-cuevas.jimdosite.com/">
+                    <img
+                      src="../multimedia/imagen-cuatro.jpeg"
+                      class="d-block w-100"
+                      alt="Imagen 3"
+                    />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="https://tomas-cuevas.jimdosite.com/">
+                    <img
+                      src="../multimedia/imagen-tres.jpeg"
+                      class="d-block w-100"
+                      alt="Imagen 4"
+                    />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="https://tomas-cuevas.jimdosite.com/">
+                    <img
+                      src="../multimedia/imagen-cinco.png"
+                      class="d-block w-100"
+                      alt="Imagen 5"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imágenes para pantallas móviles -->
+          <div class="d-md-none">
+            <div class="uno">
+              <a
+                href="https://tomas-cuevas.jimdosite.com/"
+              >
+                <img
+                  src="../multimedia/imagen-uno.jpeg"
+                  alt="autoretrato tomasc link a cv"
+                />
+              </a>
+            </div>
+
+            <div class="dos">
+              <a
+                href="https://tomas-cuevas.jimdosite.com/"
+              >
+                <img src="../multimedia/imagen-dos.jpeg" alt="" />
+              </a>
+            </div>
+
+            <div class="tres">
+              <a
+                href="https://tomas-cuevas.jimdosite.com/"
+              >
+                <img src="../multimedia/imagen-tres.jpeg" alt="" />
+              </a>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer-sm">
+          pagina creada por tomitt0 para curso desarrollo web CoderHouse
+        </footer>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+          crossorigin="anonymous"
+        ></script>
       </div>
-
-      <div class="dos">
-        <a href="https://tomas-cuevas.jimdosite.com/">
-         <img src="../multimedia/imagen-dos.jpeg" alt="" /> 
-        </a>       
-      </div>
-
-      <div class="tres">
-        <a href="https://tomas-cuevas.jimdosite.com/">
-         <img src="../multimedia/imagen-tres.jpeg" alt="" /> 
-        </a>       
-      </div>
-
-      <div class="cuatro">
-        <a href="https://tomas-cuevas.jimdosite.com/">
-         <img src="../multimedia/imagen-cuatro.jpeg" alt="" /> 
-        </a>
-        
-      </div>
-
-     
-
-    </main>
-    
-
-    <footer class="footer-sm">
-      pagina creada por tomitt0 para curso desarrollo web CoderHouse
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-  
-</html>
+    </body>
+  </html>

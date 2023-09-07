@@ -46,19 +46,28 @@ main h1 span {
   display: block;
 }
 /* botones index */
-div .botones {
-  background-color: #da922e;
+
+div .botones .boton {
   gap: 1rem;
   margin-top: 1rem;
   display: flex;
-}
-div .botones .boton {
   background-color: #da922e;
-  padding: 0.5rem 1rem;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
   border-radius: 5px;
 }
 div .botones .boton-dos {
-  padding: 0.5rem 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  background-color: #da922e;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 /* estilos section */
@@ -150,59 +159,168 @@ footer {
     padding-top: 25rem;
   }
 }
-/* estilos Sobre-Mi */
+/* estilos provincias */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* estilos sobre-mi */
 .body-sm {
   background-color: #010d16;
 }
-section .car-sm {
-  background-color: #da922e;
 
+section .card-sm {
+  background-color: #da922e;
+  text-align: center;
   border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
+
 main .sm {
-  height: 70vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 25%);
-  gap: 3rem;
-  margin: 3rem 2rem 3rem 2rem;
-  align-content: center;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
-main .dos {
+
+main .dos,
+main .cuatro,
+main .cinco {
   display: none;
 }
+
 main div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 footer .footer-sm {
   color: #da922e;
   text-align: center;
+  padding: 10px;
 }
-@media screen and (min-width: 600px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 50%);
+
+@media screen and (min-width: 768px) {
+  section .card-sm {
+    position: relative; /* Cambiar de absolute a relative */
+    top: auto; /* Quitar la propiedad top */
+    left: auto; /* Quitar la propiedad left */
+    transform: none; /* Quitar la propiedad transform */
+    margin-bottom: 20px; /* Dejar el margin-bottom */
   }
-  main .cuatro {
-    grid-column: span 2;
+
+  main .sm {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
   }
-}
-@media screen and (min-width: 1024px) {
-  main .dos {
+
+  main .uno,
+  main .tres {
+    grid-row: span 1;
+  }
+
+  main .dos,
+  main .cuatro,
+  main .cinco {
     display: block;
   }
-  main {
-    grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: 40% 40% 30%;
+}
+
+@media screen and (max-width: 767px) {
+  main .dos,
+  main .cuatro,
+  main .cinco {
+    display: none;
   }
+
   main .uno,
-  .tres {
-    grid-row: span 2;
+  main .tres {
+    display: block;
   }
 }
-main .dos,
-main .cuatro {
-  grid-column: span 1;
+/* estilos cartelera */
+.cartelera {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.footercarte {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-top: 30rem;
+  padding: 5px;
+}
+/* estilos contactate */
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  background-color: #da922e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #874c00;
+}
+
+/* Estilos del pie de página */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  header .navbar-nav {
+    flex-direction: column;
+  }
+
+  header .navbar-toggler {
+    margin-top: 10px;
+  }
 }

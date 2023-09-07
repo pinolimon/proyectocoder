@@ -3,130 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="multimedia/img2.jpg" type="image/x-icon" />
-    <title>RegionCine</title>
-    <link rel="stylesheet" href="../css/RegionCine.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../multimedia/recine-logo.png"
+      type="image/x-icon"
+    />
   </head>
   <header id="arriba">
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li>Provincias</li>
-        <li>Proyectos</li>
-        <li>Contactate</li>
-        <li>Sobre Mi</li>
-        <hr />
-      </ul>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Region Cine</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="../index.html"
+              >Inicio</a
+            >
+            <a class="nav-link" href="../paginas/Provincias.html">Provincias</a>
+            <a class="nav-link" href="../paginas/Cartelera.html">Proyectos</a>
+            <a class="nav-link" href="../paginas/Contactate.html">Contactate</a>
+            <a class="nav-link" href="../paginas/Sobre Mi.html">Sobre Mi</a>
+          </div>
+        </div>
+      </div>
     </nav>
-    <p class="colorNaranja Size">REALIZACIONES DEL NEA</p>
   </header>
-  <body> 
-    <nav class="provincias">
-      <ul>
-        <li class="chaco">Chaco</li>
-        <ul>
-          <li><a href="#LargometrajesCh">Largometrajes</a></li>
-          <li><a href="#CortometrajesCh">Cortometrajes</a></li>
-          <li><a href="#SeriesCh">Series</a></li>
-          <li><a href="#VideosCh">Videos</a></li>
-          <li><a href="#FestivalesCh">Festivales</a></li>
+  <body>
+    <nav class="botones">
+      <div>
+        <button
+          type="button"
+          class="btn btn-success dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Chaco
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#LargometrajesCh">Largometrajes</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#CortometrajesCh">Cortometrajes</a>
+          </li>
+          <li><a class="dropdown-item" href="#SeriesCh">Series</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#FestivalesCh">Festivales</a></li>
         </ul>
-
-        <li class="formosa">Formosa</li>
-        <ul>
-          <li><a href="#LargometrajesF">Largometrajes</a></li>
-          <li><a href="#CortometrajesF">Cortometrajes</a></li>
-          <li><a href="#Seriesf">Series</a></li>
-          <li><a href="#VideosF">Videos</a></li>
-          <li><a href="#FestivalesF">Festivales</a></li>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Formosa
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#LargometrajesF">Largometrajes</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#Cortometrajesf">Cortometrajes</a>
+          </li>
+          <li><a class="dropdown-item" href="#SeriesF">Series</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#FestivalesF">Festivales</a></li>
         </ul>
-
-        <li class="corrientes">Corrientes</li>
-        <ul>
-          <li><a href="#LargometrajesCo">Largometrajes</a></li>
-          <li><a href="#CortometrajesCo">Cortometrajes</a></li>
-          <li><a href="#SeriesCo">Series</a></li>
-          <li><a href="#VideosCo">Videos</a></li>
-          <li><a href="#FestivalesCo">Festivales</a></li>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Corrientes
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#LargometrajesCo">Largometrajes</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#CortometrajesCo">Cortometrajes</a>
+          </li>
+          <li><a class="dropdown-item" href="#SeriesCo">Series</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#FestivalesCo">Festivales</a></li>
         </ul>
-
-        <li class="misiones">Misiones</li>
-        <ul>
-          <li><a href="#LargometrajesM">Largometrajes</a></li>
-          <li><a href="#CortometrajesM">Cortometrajes</a></li>
-          <li><a href="#SeriesM">Series</a></li>
-          <li><a href="#VideosM">Videos</a></li>
-          <li><a href="#FestivalesM">Festivales</a></li>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Misiones
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#LargometrajesM">Largometrajes</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#CortometrajesM">Cortometrajes</a>
+          </li>
+          <li><a class="dropdown-item" href="#SeriesM">Series</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#FestivalesM">Festivales</a></li>
         </ul>
+      </div>
     </nav>
 
-    
+    <nav>
+      <h1>
+        <section class="seccion">LARGOMETRAJES</section>
+      </h1>
+      <h3 id="LargometrajesCh">CHACO</h3>
+      <img src="../multimedia/film.png" alt="" />
+      <h3 id="LargometrajesF">FORMOSA</h3>
+      <img src="../multimedia/film.png" alt="" />
+      <h3 id="LargometrajesCo">CORRIENTES</h3>
+      <img src="../multimedia/film.png" alt="" />
+      <h3 id="LargometrajesM">MISIONES</h3>
+      <img src="../multimedia/film.png" alt="" />
+      <h1>
+        <section id="cortometrajes">CORTOMETRAJES</section>
 
-      <nav>
-        <h1>
-          <section class="seccion">LARGOMETRAJES</section>
-          
-        </h1>
-        <h3 id="LargometrajesCh">CHACO</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h3 id="LargometrajesF">FORMOSA</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h3 id="LargometrajesCo">CORRIENTES</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h3 id="LargometrajesM">MISIONES</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h1>
-          <section id="cortometrajes">CORTOMETRAJES</section>
-          
         <h3 id="CortometrajesCh">CHACO</h3>
-        <img src="../multimedia/alhilo.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="CortometrajesF">FORMOSA</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="CortometrajesCo">CORRIENTES</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="CortometrajesM">MISIONES</h3>
-        <img src="../multimedia/film.png" alt="">
-        </h1>
-        <h1>
-          <section class="series">SERIES</section>
-          
+        <img src="../multimedia/film.png" alt="" />
+      </h1>
+      <h1>
+        <section class="series">SERIES</section>
+
         <h3 id="SeriesCh">CHACO</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="SeriesF">FORMOSA</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="SeriesCo">CORRIENTES</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="SeriesM">MISIONES</h3>
-        <img src="../multimedia/film.png" alt="">
-        </h1>
-        <h1>
-          <section class="videos"> VIDEOS</section>
-          
-        <h3 id="VideosCh">CHACO</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h3 id="VideosF">FORMOSA</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h3 id="VideosCo">CORRIENTES</h3>
-        <img src="../multimedia/film.png" alt="">
-        <h3 id="VideosM">MISIONES</h3>
-        <img src="../multimedia/film.png" alt="">
-        </h1>
-        <h1>
-          <section class="festi">FESTIVALES</section>
+        <img src="../multimedia/film.png" alt="" />
+      </h1>
+
+      <h1>
+        <section class="festi">FESTIVALES</section>
         <h3 id="FestivalesCh">CHACO</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="FestivalesF">FORMOSA</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="FestivalesCo">CORRIENTES</h3>
-        <img src="../multimedia/film.png" alt="">
+        <img src="../multimedia/film.png" alt="" />
         <h3 id="FestivalesM">MISIONES</h3>
-        <img src="../multimedia/film.png" alt="">
-        </h1>
-      </nav>
+        <img src="../multimedia/film.png" alt="" />
+      </h1>
+    </nav>
+    <footer class="footer">
+      <a href="#arriba">Volver arriba</a>
+      <p class="footer">Página creada por tomitt0 para curso Desarrollo Web</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  <footer class="footer">
-    <a href="#arriba">Volver arriba</a>
-    <p class="footer">Página creada por tomitt0 para curso Desarrollo Web</p>
-   
-  </footer>
 </html>

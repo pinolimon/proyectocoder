@@ -15,7 +15,7 @@
     type="image/x-icon"
   />
   </head>
-  <body class="contactate">
+  <body class="cartelera">
     <header id="arriba">
       <nav class="navbar">
         <div class="container-fluid">
@@ -45,48 +45,37 @@
         </div>
       </nav>
     </header>
-        
-        Si tenes un proyecto que querés compartir, contactate con nosotros.
-      </header>
-      <hr />
-      <form method="get" action="" enctype="">
-        <label for="nombre">Nombre:</label>
-        <input type="text" required name="nombre" />
-        <br />
-        <label for="apellido">Apellido</label>
-        <input type="text" required name="apellido" />
-        <br />
-        <label for="proyecto"> Proyecto </label>
-        <input type="text" name="proyecto" />
-        <br />
-        <label for="mensaje">Dejanos tu mensaje</label>
-        <textarea name="mensaje" cols="60" rows="7"></textarea>
-        <label for="provincia">¿De dónde sos?</label>
-        <select name="provincia">
-          <option value="CHA">Chaco</option>
-          <option value="FOR">Formosa</option>
-          <option value="COR">Corrientes</option>
-          <option value="MIS">Misiones</option>
-          <option value="MIS">Otro</option>
-        </select>
-        <input type="reset" value="Borrar todo" />
-        <input type="submit" value="Enviar" />
-        <fieldset>
-          <legend>Datos de contacto</legend>
-          <label for="direccion">Ingresa tu correo</label>
-          <input type="mail" name="direccion" />
-        </fieldset>
-      </form>
- <footer class="footercontacto">
-      <p class="footer">Página creada por tomitt0 para curso Desarrollo Web</p>
-      
-    </footer>
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"
-  ></script>  
-    </body>
-   
-  </html>
+    <nav>
+      <div id="carrete" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../multimedia/alhilo.png" class="d-block w-100 mx-auto" style="max-width: 50%;" alt="flyer corto al hilo">
+          </div>
+          <div class="carousel-item">
+            <img src="../multimedia/cartelera.jpg" class="d-block w-100 mx-auto" style="max-width: 50%;" alt="flyer corto la vieja chusma">
+          </div>
+          <div class="carousel-item">
+            <img src="../multimedia/recine-logo.png" class="d-block w-100 mx-auto" style="max-width: 50%;" alt="logo cine region">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrete" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrete" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </nav>
+  <footer class="footercarte">
+    <p class="footer">Página creada por tomitt0 para curso Desarrollo Web</p>
+  </footer>
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>  
+  </body>
+  
 </html>
